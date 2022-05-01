@@ -11,14 +11,14 @@ namespace exercitiiCurs1
             // Pentru a rula exercitiul 1 vom sterge "//" din fata liniei 12, "//Ex1" si vom comenta linia 13 adaugand "//" in fata textului "Ex2"
             //Ex1();
             //Ex2();
-            //Ex3();
+            Ex3();
             //Ex4();
             //Ex5();
             //Ex6();
             //Ex7();
             //Ex8();
             //Ex9();
-            Ex10();
+            //Ex10();
             // Sa nu uitati sa salvati in mod frecvent (Ctrl+S) pentru a nu pierde munca
         }
         static void Ex1()
@@ -53,15 +53,23 @@ namespace exercitiiCurs1
         {
             // Scrieti un program care va afisa ultima cifra a unui numar intreg citit de la
             //tastaura
-            Console.WriteLine("Introduceti un numar");
-            int numarIntreg = int.Parse(Console.ReadLine());
-            string numar = numarIntreg.ToString();
-            string rezultat = "";
-            for (int i = numar.Length - 1; i < numar.Length; i++)
-            {
-                rezultat = numar[i].ToString();
-            }
-            Console.WriteLine("Ultima cifra a numarului introdus este " + rezultat);
+            //Console.WriteLine("Introduceti un numar");
+            //int numarIntreg = int.Parse(Console.ReadLine());
+            //string numar = numarIntreg.ToString();
+            //string rezultat = "";
+            //for (int i = numar.Length - 1; i < numar.Length; i++)
+            //{
+            //    rezultat = numar[i].ToString();
+            //}
+            //Console.WriteLine("Ultima cifra a numarului introdus este " + rezultat);
+
+            ////varianta profesorului
+            Console.WriteLine("Introduceti numarul ");
+            int numarul = int.Parse(Console.ReadLine());
+
+            int ultimaCifra = numarul % 10;
+
+            Console.WriteLine("ultima cifra a numarului este " + ultimaCifra);
         }
         static void Ex4()
         {
@@ -132,6 +140,67 @@ namespace exercitiiCurs1
             {
                 Console.Write(item + " ");
             }
+
+            //// varianta profesorului
+
+            //Console.WriteLine("Introduceti primul numar");
+            //int x = int.Parse(Console.ReadLine());
+
+            //Console.WriteLine("Introduceti al doilea numar");
+            //int y = int.Parse(Console.ReadLine());
+
+            //Console.WriteLine("Introduceti al treilea numar");
+            //int z = int.Parse(Console.ReadLine());
+
+            //Console.WriteLine("Numerele ordonate");
+            //if (x > y)
+            //{
+            //    if (z > x)
+            //    {
+            //        //zxy
+            //        Console.WriteLine(z);
+            //        Console.WriteLine(x);
+            //        Console.WriteLine(y);
+            //    }
+            //    else if (y > z)
+            //    {
+            //        //xyz
+            //        Console.WriteLine(x);
+            //        Console.WriteLine(y);
+            //        Console.WriteLine(z);
+            //    }
+            //    else
+            //    {
+            //        //xzy
+            //        Console.WriteLine(x);
+            //        Console.WriteLine(z);
+            //        Console.WriteLine(y);
+            //    }
+            //}
+            //else
+            //{
+            //    if (z > y)
+            //    {
+            //        //zyx
+            //        Console.WriteLine(z);
+            //        Console.WriteLine(y);
+            //        Console.WriteLine(x);
+            //    }
+            //    else if (x > z)
+            //    {
+            //        //yxz
+            //        Console.WriteLine(y);
+            //        Console.WriteLine(x);
+            //        Console.WriteLine(z);
+            //    }
+            //    else
+            //    {
+            //        //yzx
+            //        Console.WriteLine(y);
+            //        Console.WriteLine(z);
+            //        Console.WriteLine(x);
+            //    }
+            //}
         }
         static void Ex7()
         {
@@ -139,13 +208,20 @@ namespace exercitiiCurs1
             // In cazul in care numarul este par, programul va afisa “par” iar in caz contrar, “impar”.
             Console.WriteLine("Introduceti un numar");
             int numar = int.Parse(Console.ReadLine());
-            if (numar % 2 == 0)
+            if (numar==0)
             {
-                Console.WriteLine("par");
+                Console.WriteLine("Numarul introdus este 0");
             }
             else
             {
-                Console.WriteLine("impar");
+                if (numar % 2 == 0)
+                {
+                    Console.WriteLine("par");
+                }
+                else
+                {
+                    Console.WriteLine("impar");
+                }
             }
         }
         static void Ex8()
@@ -197,6 +273,15 @@ namespace exercitiiCurs1
                 rezultat = int.Parse(cifre[0].ToString()) + int.Parse(cifre[1].ToString());
                 Console.WriteLine("Suma cifrelor numarului introdus este " + rezultat);
             }
+
+            ////varianta profesorului
+
+            //Console.WriteLine("Introduceti primul numar");
+            //int x = int.Parse(Console.ReadLine());
+
+            //int sumaCifrelor = x / 10 + x % 10;
+
+            //Console.WriteLine("suma cifrelor este " + sumaCifrelor);
         }
     }
 }
