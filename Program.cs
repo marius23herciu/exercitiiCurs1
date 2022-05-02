@@ -53,23 +53,20 @@ namespace exercitiiCurs1
         {
             // Scrieti un program care va afisa ultima cifra a unui numar intreg citit de la
             //tastaura
-            //Console.WriteLine("Introduceti un numar");
-            //int numarIntreg = int.Parse(Console.ReadLine());
-            //string numar = numarIntreg.ToString();
-            //string rezultat = "";
-            //for (int i = numar.Length - 1; i < numar.Length; i++)
-            //{
-            //    rezultat = numar[i].ToString();
-            //}
-            //Console.WriteLine("Ultima cifra a numarului introdus este " + rezultat);
+            Console.WriteLine("Introduceti un numar");
+            int numarIntreg = int.Parse(Console.ReadLine());
+            string numar = numarIntreg.ToString();
+            string rezultat = "";
+            rezultat = numar[numar.Length-1].ToString();
+            Console.WriteLine("Ultima cifra a numarului introdus este " + rezultat);
 
             ////varianta profesorului
-            Console.WriteLine("Introduceti numarul ");
-            int numarul = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Introduceti numarul ");
+            //int numarul = int.Parse(Console.ReadLine());
 
-            int ultimaCifra = numarul % 10;
+            //int ultimaCifra = numarul % 10;
 
-            Console.WriteLine("ultima cifra a numarului este " + ultimaCifra);
+            //Console.WriteLine("ultima cifra a numarului este " + ultimaCifra);
         }
         static void Ex4()
         {
